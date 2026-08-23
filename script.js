@@ -78,30 +78,45 @@
 // console.log(student["id"]); // bracket notation also works
 // console.log(student.greet());
 
-function temperatureConverter(value, unit) {
-  if (unit === "C") {
-    return (value * 9 / 5) + 32; // Celsius to Fahrenheit
-  }
-  if (unit === "F") {
-    return (value - 32) * 5 / 9; // Fahrenheit to Celsius
-  }
-  return undefined; // unrecognised unit
-}
+// function temperatureConverter(value, unit) {
+//   if (unit === "C") {
+//     return (value * 9 / 5) + 32; // Celsius to Fahrenheit
+//   }
+//   if (unit === "F") {
+//     return (value - 32) * 5 / 9; // Fahrenheit to Celsius
+//   }
+//   return undefined; // unrecognised unit
+// }
  
-console.log(temperatureConverter(0, "C"));   // 32
-console.log(temperatureConverter(100, "C")); // 212
-console.log(temperatureConverter(32, "F")); 
+// console.log(temperatureConverter(0, "C"));   // 32
+// console.log(temperatureConverter(100, "C")); // 212
+// console.log(temperatureConverter(32, "F")); 
 
-const students = [
-  { name: "Chiku", score: 78, year: 2 },
-  { name: "Thoko", score: 45, year: 3 },
-  { name: "Blessings", score: 61, year: 1 },
-  { name: "Tadala", score: 39, year: 4 },
-  { name: "Nchimunya", score: 50, year: 2 }
-];
+// const students = [
+//   { name: "Chiku", score: 78, year: 2 },
+//   { name: "Thoko", score: 45, year: 3 },
+//   { name: "Blessings", score: 61, year: 1 },
+//   { name: "Tadala", score: 39, year: 4 },
+//   { name: "Nchimunya", score: 50, year: 2 }
+// ];
  
-function getPassingStudents(list) {
-  return list.filter((s) => s.score >= 50);
+// function getPassingStudents(list) {
+//   return list.filter((s) => s.score >= 50);
+// }
+ 
+// console.log(getPassingStudents(students));
+
+// function formatseconds (secondsFt){
+//  const h = Math.floor(secondsFt/3600);
+//  const m = Math.floor((secondsFt/60))
+// }
+
+function formatSeconds(totalSeconds) {
+  const hours = Math.floor(totalSeconds / 3600);
+  const leftOver1 = totalSeconds % 3600;
+  const minutes = Math.floor(leftOver1 / 60);
+  const seconds = leftOver1 % 60;
+  return `${hours} hours, ${minutes} minutes, ${seconds} seconds`;
 }
- 
-console.log(getPassingStudents(students));
+
+console.log(formatSeconds(3665));
