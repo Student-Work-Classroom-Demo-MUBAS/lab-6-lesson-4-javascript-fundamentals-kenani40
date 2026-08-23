@@ -125,3 +125,19 @@ console.log(formatSeconds(3665));
 const scores = [85, 52, 67, 43, 91, 38];
 const letterGrades = scores.map(gradeToLetter);
 console.log(letterGrades);
+
+
+// without destructuring
+const nameOld = student.name;
+const idOld = student.id;
+console.log("Before destructuring:", nameOld, idOld);
+ 
+// destructuing
+const { name, id } = student;
+console.log("After destructuring:", name, id);
+
+// spread operator
+const coreModules = ["IWS", "EMS"];
+const electiveModules = ["Power Systems", "DSP"];
+const allModules = ["mkenani","vega",...coreModules, ...electiveModules];
+console.log("Merged with spread:", allModules);
