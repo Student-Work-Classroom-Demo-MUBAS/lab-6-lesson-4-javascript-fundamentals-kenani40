@@ -78,19 +78,19 @@
 // console.log(student["id"]); // bracket notation also works
 // console.log(student.greet());
 
-// function temperatureConverter(value, unit) {
-//   if (unit === "C") {
-//     return (value * 9 / 5) + 32; // Celsius to Fahrenheit
-//   }
-//   if (unit === "F") {
-//     return (value - 32) * 5 / 9; // Fahrenheit to Celsius
-//   }
-//   return undefined; // unrecognised unit
-// }
+function temperatureConverter(value, unit) {
+  if (unit === "C") {
+    return (value * 9 / 5) + 32; // Celsius to Fahrenheit
+  }
+  if (unit === "F") {
+    return (value - 32) * 5 / 9; // Fahrenheit to Celsius
+  }
+  return undefined; // unrecognised unit
+}
  
-// console.log(temperatureConverter(0, "C"));   // 32
-// console.log(temperatureConverter(100, "C")); // 212
-// console.log(temperatureConverter(32, "F")); 
+console.log(temperatureConverter(0, "C"));   // 32
+console.log(temperatureConverter(100, "C")); // 212
+console.log(temperatureConverter(32, "F")); 
 
 const students = [
   { name: "Chiku", score: 78, year: 2 },
