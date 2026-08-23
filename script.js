@@ -1,0 +1,10 @@
+const studentName = "Mphatso Kenani";
+let year = 4;
+const isEnrolled = true;
+console.log("Name:", studentName);
+console.log("Year:", year);
+console.log("Type of year:", typeof year);
+console.log(`${studentName} is in year ${year}`);
+let cgpa = 3.75;
+console.log(`CGPA rounded: ${Math.round(cgpa)}`);
+console.log(`CGPA fixed: ${cgpa.toFixed(1)}`);
